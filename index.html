@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="he-IL" dir="rtl">
+
+<head>
+	
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<!-- Load CSS Start -->
+	<script>loadLocalStorageCSS( "webfonts", "https://fonts.googleapis.com/css?family=Assistant:400,600,700&subset=hebrew" );</script>
+	<!-- Load CSS End -->
+
+</head>
+
+<body>
+
+<div class="all">
+	<div class="container">
+		<span class="event-date" id="event-date">11.04.2018</span>
+		<div class="header">
+			<img src="img/logo.png" alt="atidim">
+			<h1 id="event-name">כותרת אירוע לדוגמה</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente omnis animi illum nobis repudiandae iusto assumenda perferendis quos nostrum magnam necessitatibus harum hic quibusdam aspernatur, impedit enim dolor, quaerat eligendi.
+			</p>
+		</div>
+		<form id="myform" class="forms pure-form pure-form-stacked">
+			<!-- HIDDEN ITEMS -->
+			<input id="event-input" type="hidden" name="event_name" value="no event name found">
+			<input id="event-date-input" type="hidden" name="event_date" value="01.01.2018">
+			<div class="pure-g">
+			  <div class="pure-u-1">
+	        <label for="name">שם מלא</label>
+					<input name="name" id="name" type="text" class="" placeholder="שם ושם משפחה">
+			  </div>
+			  <div class="pure-u-1">
+	        <label for="phone">טלפון</label>
+					<input dir="ltr" name="phone" id="phone" type="text" class="" placeholder="03-123-4567">
+			  </div>
+			  <div class="pure-u-1">
+	        <label for="email">דוא''ל</label>
+					<input dir="ltr" name="email" id="email" type="email" class="" placeholder="mymail@example.com">
+			  </div>
+			  <div class="pure-u-1">
+	        <label for="company">חברה</label>
+					<input name="company" id="company" type="text" class="" placeholder="שם של החברה" >
+			  </div>
+			  <div class="pure-u-1">
+	        <label for="occupation">תפקיד</label>
+					<input name="occupation" id="occupation" type="text" class="" placeholder="מה התפקיד בחברה">
+			  </div>
+			  <div class="pure-u-1">
+	        <label for="rashut">רשות</label>
+					<input name="rashut" id="rashut" type="text" class="" placeholder="רשות">
+			  </div>
+			</div>
+	
+				
+				<!-- <label for="terms" class="pure-checkbox check">
+					<input type="hidden" name="terms" value="no">
+	        <input id="terms" type="checkbox" name="terms" value="yes"> אישור רישום ויזואלי
+	      </label> -->
+	      <button type="submit" class="btn button-xlarge pure-button pure-button-primary">שליחה</button>
+		</form>
+	</div>
+</div>
+
+<link rel="stylesheet" href="css/app.min.css">
+<script src="js/scripts.min.js"></script>
+<script src="js/common.js"></script>
+<script src="https://zur4win.com/acctoolbar/zur.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+Id,name,phone,email,company,occupation,rashut,date,כותרת אירוע לדוגמה
