@@ -1,0 +1,5 @@
+
+api/csv/*.csv
+api/html/*.html
+api/table_content.txt
+api/temp_file_name.txt
