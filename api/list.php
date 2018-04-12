@@ -63,37 +63,43 @@ if (@!$_GET['foobargetlist'] || $_GET['foobargetlist'] != '1618') {
         ?>
     </div>
 <?php endif ?>
-    
+ 
+</div>
+</div>
+
 <?php if(count($htmlfiles) > 1): ?>
-    <div class="old-lists">
-        <h2 class="text-center">קבצים ישנים</h2>
-        <div dir="ltr" class="htmllinks links">
-            <h3><span dir="rtl">רשימות ישנות</span></h3><br>
-            <?php 
-                foreach ($htmlfiles as $link) {
-                    if ($link !== $filename_title.'.html') {
-                        echo '<a id="'.$link.'" href="#">'.str_replace('.html', '', $link).'</a><br>';
-                    }
-                }
-            ?>
-        </div>
-        
-        <div dir="ltr" class="links">
-            <h3><span dir="rtl">CSV להורדה</span></h3><br>
-            <?php 
-                foreach ($csvfiles as $link) {
-                    if ($link !== $filename_title.'.csv') {
-                        echo '<a href="csv/'.$link.'">'.$link.'</a><br>';
-                    }
-                    
-                }
-            ?>
+    <div class="old-lists-btn">
+        <span>רשימות ישנות</span>
+    </div>
+    <div class="old-lists show-hide">
+        <h2 class="text-center old-files-header"><span>קבצים ישנים</span><span class="closebtn">&times;</span></h2>
+        <div class="row">
+            <div class="large-12 columns">
+                <div dir="ltr" class="htmllinks links">
+                    <h3><span dir="rtl">הצגת רשימות ישנות</span></h3><br>
+                    <?php 
+                        foreach ($htmlfiles as $link) {
+                            if ($link !== $filename_title.'.html') {
+                                echo '<a id="'.$link.'" href="#">'.str_replace('.html', '', $link).'</a><br>';
+                            }
+                        }
+                    ?>
+                </div>
+                
+                <div dir="ltr" class="links">
+                    <h3><span dir="rtl">רשימת CSV להורדה</span></h3><br>
+                    <?php 
+                        foreach ($csvfiles as $link) {
+                            if ($link !== $filename_title.'.csv') {
+                                echo '<a href="csv/'.$link.'">'.$link.'</a><br>';
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 <?php endif ?>
-
-</div>
-</div>
 
 <div id="popup" class="popup">
     <div dir="ltr" class="loading"><span>loading</span></div>
@@ -111,28 +117,7 @@ if (@!$_GET['foobargetlist'] || $_GET['foobargetlist'] != '1618') {
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    jQuery(document).ready(function($) {
-        $('.htmllinks').on('click', 'a', function(event) {
-            event.preventDefault();
-            $('#popup').show();
-            $('.loading').show();
-            $('#event_c_name').html($(this).attr('id'));
-            $.get('html/' + $(this).attr('id'), function(data) {
-                setTimeout(function(){
-                    $('.loading').fadeOut();
-                    $('#popup table').html(data + '</tbody>');
-                }, 500);
-                
-                
-            });
-        });
-        $('body').on('click', '.closebtn', function(event) {
-            event.preventDefault();
-            $('#popup').hide();
-        });
-    });
-</script>
+<script src="styles/app.js"></script>
 </body>
 </html>
 

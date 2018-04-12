@@ -48,7 +48,7 @@ array_push($list_content, 'Id');
 
 foreach ($safe_post as $key => $value) {
   if ($key !== "event_name" and $key !== "event_date") {
-    $message .= "<tr><th style='border-top:dotted 1px #000;border-left:dotted 1px #000;'><strong>{$key}</strong></th><td style='border-top:dotted 1px #000;'>{$value}</td>";
+    $message .= "<tr><th style='border-top:dotted 1px #000;border-left:dotted 1px #000;'><strong>{$key}</strong></th><td style='border-top:dotted 1px #000;'>{$value}</td>\n\r";
     $text_content .= "<td>{$value}</td>";
     $csv_content .= "{$value},";
     array_push($list_content, $key);
@@ -64,7 +64,7 @@ if (count(file('html/atidim_event_reg_'.$event_date_file_name.'.html')) < 1) {
   foreach ($list_content as $key => $value) {
     $html_content_header .= "<th>".$value."</th>";
   }
-  $html_content_header .= '</tr></thead><tbody>';
+  $html_content_header .= "</tr></thead>"."\r\n"."<tbody>"."\r\n";
 }
 
 
