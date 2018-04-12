@@ -72,7 +72,7 @@ if (@!$_GET['foobargetlist'] || $_GET['foobargetlist'] != '1618') {
         <span>רשימות ישנות</span>
     </div>
     <div class="old-lists show-hide">
-        <h2 class="text-center old-files-header"><span>קבצים ישנים</span><span class="closebtn">&times;</span></h2>
+        <h2 class="text-center old-files-header"><span>קבצים ישנים</span><span class="closebtnall">&times;</span></h2>
         <div class="row">
             <div class="large-12 columns">
                 <div dir="ltr" class="htmllinks links">

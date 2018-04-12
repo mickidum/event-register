@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
             setTimeout(function(){
                 $('.loading').fadeOut();
                 $('#popup table').html(data + '</tbody>');
-            }, 500);
+            }, 200);
             
             
         });
@@ -23,8 +23,9 @@ jQuery(document).ready(function($) {
         $('.show-hide').fadeIn();
     });
 
-    $('body').on('click', '.closebtn', function(event) {
+    $('body').on('click', '.closebtnall', function(event) {
         event.preventDefault();
-        $('.show-hide').fadeOut();
+        $('.show-hide').hide();
+        $('#popup').hide();
     });
 });

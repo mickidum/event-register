@@ -144,7 +144,7 @@ p, h1, table, td, th {text-align: center !important;}
   display: none;
 }
 
-.old-files-header .closebtn {
+.old-files-header .closebtnall {
   position: absolute;
   left: 0px;
   height: 100%;
