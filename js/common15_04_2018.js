@@ -2,15 +2,12 @@ jQuery(document).ready(function($) {
 $('#event-input').val($('#event-name').html());
 
 var event_date = $('#event-date').text();
-event_date = event_date.replace(/\./g, '_');
-
-// console.log(event_date);
+event_date = event_date.split('.');
 
 // var monthfix = 
-// send_date = Math.round(new Date(event_date[2] + '-' + '0' + event_date[1] + '-' + event_date[0]).getTime()/1000.0);
-
+send_date = Math.round(new Date(event_date[2] + '-' + '0' + event_date[1] + '-' + event_date[0]).getTime()/1000.0);
 // send_date = new Date(event_date[2] + '-' + '0' + event_date[1] + '-' + event_date[0]);
-$('#event-date-input').val(event_date);
+$('#event-date-input').val(send_date);
 
 // FORM
 $('#myform').on('submit',  function(event) {
